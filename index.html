@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>I See You</title>
+    <link rel = "icon" href = "favicon.jpg"  type = "image/jpg">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css'>
+    <style type="text/css">
+        body {
+            flex-direction: column;
+            background-color: #0F30B8;
+            font-family: 'VT323', monospace;
+            color: #FFFFFF;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        h1 {
+            display: inline-block;
+            background-color: #B7B7B7;
+            font-size: 40px;
+            color: #0F30B8;
+            padding: 0 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .container {
+            width: 100%;
+            justify-content: center;
+        }
+        .dataCont, .goodMsg {
+            font-size: 30px;
+            width: 70%;
+            margin: auto;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            font-size: 20px;
+            bottom: 0;
+            position: fixed;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 999;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer i {
+            color: red;
+        }
+
+        footer a {
+            color: #3c97bf;
+            text-decoration: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>I See You</h1><br>
+        <p style="font-size: 30px; text-align: center;">This site shows the personal infomations a website will see as soon as you click it's link.</p><br>
+        <div class="dataCont">
+            * IP Address -> <span Id="ip" style="background: #AD0000;">IP</span><br><br>
+            * Internet Service Provider(ISP) -> <span Id="isp" style="background: #AD0000;">ISP</span><br><br>
+            * City -> <span Id="city" style="background: #AD0000;">City</span><br><br>
+            * State/Region -> <span Id="region" style="background: #AD0000;">Region</span><br><br>
+            * Country -> <span Id="country" style="background: #AD0000;">Country</span><br><br>
+            * Continent -> <span Id="continent" style="background: #AD0000;">Continent</span><br><br>
+            * Location -> <span Id="coordinates" style="background: #AD0000;">Coordinates</span><br><br>
+            * Postal Code -> <span Id="postalCode" style="background: #AD0000;">PostalCode</span><br><br>
+            <script type="text/javascript">!function(s){var i,o,e,r,n,d,t=s.navigator.userAgent;s.navigator.appVersion;platform=s.navigator.platform,/MSIE/.test(t)?(i="Internet Explorer",/IEMobile/.test(t)&&(e=1),o=/MSIE \d+[.]\d+/.exec(t)[0].split(" ")[1]):/Chrome/.test(t)?(/CrOS/.test(t)&&(platform="CrOS"),i="Chrome",o=/Chrome\/[\d\.]+/.exec(t)[0].split("/")[1]):/Opera/.test(t)?(i="Opera",(/mini/.test(t)||/Mobile/.test(t))&&(e=1)):/Android/.test(t)?(i="Android Webkit Browser",e=1,r=/Android\s[\.\d]+/.exec(t)[0]):/Firefox/.test(t)?(i="Firefox",/Fennec/.test(t)&&(e=1),o=/Firefox\/[\.\d]+/.exec(t)[0].split("/")[1]):/Safari/.test(t)&&(i="Safari",(/iPhone/.test(t)||/iPad/.test(t)||/iPod/.test(t))&&(r="iOS",e=1)),o||(o=/Version\/[\.\d]+/.exec(t),o=o?o[0].split("/")[1]:/Opera\/[\.\d]+/.exec(t)[0].split("/")[1]),"MacIntel"===platform||"MacPPC"===platform?(r="Mac OS X",n=/10[\.\_\d]+/.exec(t)[0],/[\_]/.test(n)&&(n=n.split("_").join("."))):"CrOS"===platform?r="ChromeOS":"Win32"===platform||"Win64"==platform?(r="Windows",d=platform.replace(/[^0-9]+/,"")):!r&&/Android/.test(t)?r="Android":!r&&/Linux/.test(platform)?r="Linux":!r&&/Windows/.test(t)&&(r="Windows");var a=[{s:"Windows 10",r:/(Windows 10.0|Windows NT 10.0)/},{s:"Windows 8.1",r:/(Windows 8.1|Windows NT 6.3)/},{s:"Windows 8",r:/(Windows 8|Windows NT 6.2)/},{s:"Windows 7",r:/(Windows 7|Windows NT 6.1)/},{s:"Windows Vista",r:/Windows NT 6.0/},{s:"Windows Server 2003",r:/Windows NT 5.2/},{s:"Windows XP",r:/(Windows NT 5.1|Windows XP)/},{s:"Windows 2000",r:/(Windows NT 5.0|Windows 2000)/},{s:"Windows ME",r:/(Win 9x 4.90|Windows ME)/},{s:"Windows 98",r:/(Windows 98|Win98)/},{s:"Windows 95",r:/(Windows 95|Win95|Windows_95)/},{s:"Windows NT 4.0",r:/(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/},{s:"Windows CE",r:/Windows CE/},{s:"Windows 3.11",r:/Win16/},{s:"Android",r:/Android/},{s:"Open BSD",r:/OpenBSD/},{s:"Sun OS",r:/SunOS/},{s:"Linux",r:/(Linux|X11)/},{s:"iOS",r:/(iPhone|iPad|iPod)/},{s:"Mac OS X",r:/Mac OS X/},{s:"Mac OS",r:/(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/},{s:"QNX",r:/QNX/},{s:"UNIX",r:/UNIX/},{s:"BeOS",r:/BeOS/},{s:"OS/2",r:/OS\/2/},{s:"Search Bot",r:/(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/}];for(var W in a){var w=a[W];if(w.r.test(t)){r=w.s;break}}switch(/Windows/.test(r)&&(n=/Windows (.*)/.exec(r)[1],r="Windows"),r){case"Mac OS X":n=/Mac OS X (10[\.\_\d]+)/.exec(t)[1];break;case"Android":osVersion=/Android ([\.\_\d]+)/.exec(t)[1];break;case"iOS":n=/OS (\d+)_(\d+)_?(\d+)?/.exec(nVer),n=n[1]+"."+n[2]+"."+(0|n[3])}s.ui={browser:i,version:o,mobile:e,os:r,osversion:n,bit:d}}(this);</script>
+            * Browser -> <span style="background: #AD0000;">&nbsp;<script type="text/javascript">document.write(window.ui.browser + " " + window.ui.version);</script>&nbsp;</span><br><br>
+            * Operating System -> <span style="background: #AD0000;">&nbsp;<script type="text/javascript">document.write(window.ui.os); if (window.ui.osversion != null) document.write(" " + window.ui.osversion);</script>&nbsp;</span><br><br>
+            * Screen Resolution -> <span style="background: #AD0000;">&nbsp;<script type="text/javascript">document.write(screen.width + "x" + screen.height);</script>px&nbsp;</span><br><br>
+            * Number Of CPU Cores -><span style="background: #AD0000;">&nbsp;<script type="text/javascript">document.write(navigator.hardwareConcurrency)</script>-cores&nbsp;</span><br><br>
+        </div>
+    </div>
+
+    <div Id="disclaim" style="text-align: left; left: 0.1%; bottom: 4%; position: fixed;">
+        Disclaimer : Non of the information shown above are stored, recorded or collected.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This site's use is intended for &nbsp;educational and infomational purposes only.
+    </div>
+
+    <footer>
+        <p>
+            Created with <i class="fa fa-heart"></i> by
+			<a target="_blank" href="https://shandeep.tk">Shandeep</a>
+			- More on
+			<a target="_blank" href="https://github.com/shandeepc">Github</a>
+			- Follow me on
+			<a target="_blank" href="https://www.instagram.com/_random_nerd">Instagram</a>
+        </p>
+    </footer>
+</body>
+
+<script>
+
+     $.get("https://ipinfo.io", function (response) {
+         console.log(response);
+         document.getElementById('ip').innerHTML = "&nbsp;"+response.ip+"&nbsp;";
+         document.getElementById('isp').innerHTML = "&nbsp;"+response.org+"&nbsp;";
+         document.getElementById('city').innerHTML = "&nbsp;"+response.city+"&nbsp;";
+         document.getElementById('region').innerHTML = "&nbsp;"+response.region+"&nbsp;";
+         document.getElementById('country').innerHTML = "&nbsp;"+response.country+"&nbsp;";
+         document.getElementById('continent').innerHTML = "&nbsp;"+response.timezone.split('/')[0]+"&nbsp;";
+         document.getElementById('coordinates').innerHTML = "&nbsp;"+response.loc+"&nbsp;";
+         document.getElementById('postalCode').innerHTML = "&nbsp;"+response.postal+"&nbsp;";
+     }, "json").catch(function(e){
+        console.log(e);
+        document.getElementsByClassName('dataCont')[0].innerHTML = "<p style='text-align: center;''>Good, you are using a good Ad Blocker<br>Turn off the Ad Blocker to see personal infomations<p>";
+    });
+</script>
+
+</html>
